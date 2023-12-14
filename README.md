@@ -1,10 +1,22 @@
-# KMA machine learning course competition 2
+# Toxic Comment Classification Competition
 
 ## Overview
-In this competition, you’re challenged to build a multi-headed model that’s capable of detecting different types of of toxicity like threats, obscenity, insults, and identity-based hate
+This repository contains the code and models for the Toxic Comment Classification Competition on [Kaggle](https://www.kaggle.com/competitions/kmaml223/). The goal is to build a model that can classify comments into various toxicity categories.
 
-## Evaluation
-Submissions are evaluated on the mean column-wise ROC AUC. In other words, the score is the average of the individual AUCs of each predicted column.
+## Repository Structure
+- `.github/workflows`: Contains GitHub Actions for CI/CD.
+- `EDA`: Jupyter notebooks for exploratory data analysis.
+- `configs`: Configuration files for model training.
+- `src`: Source code for training and inference.
+- `tests`: Test cases for the source code.
+- `requirements.txt`: List of Python package dependencies.
 
-## Submission File
-For each id in the test set, you must predict a probability for each of the six possible types of comment toxicity (toxic, severe_toxic, obscene, threat, insult, identity_hate). The columns must be in the same order as shown below. The file should contain a header and have the following format:
+## Getting Started
+To set up the project, run `pip install -r requirements.txt` to install the required dependencies.
+
+## Usage
+To train the model, run `python src/train.py` with the appropriate configuration file.
+To perform inference, run `python -m src.inference "your text here"`.
+
+## Testing
+Run `pytest` in the root directory to execute the test suite. The code has a test coverage of at least 40%.
