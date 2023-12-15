@@ -33,3 +33,11 @@ def clean_text(text):
     text = ' '.join([lemmatizer.lemmatize(word) for word in text.split()])
 
     return text
+
+if __name__ == "__main__":
+    if len(sys.argv) > 1:
+        input_text = sys.argv[1]
+        cleaned_text = clean_text(input_text)
+        print(cleaned_text)
+    else:
+        print("Please provide text to clean as a command-line argument.")
